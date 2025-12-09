@@ -29,7 +29,10 @@ abstract class Machine(
     val states: MutableList<State>,
     val transitions: MutableList<Transition>,
     var imuInput: StringBuilder = java.lang.StringBuilder(),
-    val savedInputs: MutableList<StringBuilder>
+    val savedInputs: MutableList<StringBuilder>,
+    // Machine.kt
+    //var turingTape: TuringTape? = null
+
 ) {
     // hore medzi ostatné vlastnosti Machine
     var fullInputSnapshot: String = ""

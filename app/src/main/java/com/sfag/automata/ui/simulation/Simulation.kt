@@ -47,8 +47,12 @@ fun Machine.SimulateMachine(
     Transitions(dragModifier = dragModifier, offsetY, offsetX, onTransitionClick = null)
     States(dragModifier = dragModifier, null, offsetY, offsetX, onStateClick = {})
 
-    // ⬆️ páska s ikonou pera vľavo
+    // páska s ikonou pera vľavo
     InputBar(onEditInputClick = onEditInputClick)
+/*// --- Turing tape bar (zobrazenie dynamickej pásky) ---
+    turingTape?.let {
+        TuringTapeBar(tape = it)
+    }*/
 
     if (machineType == MachineType.Pushdown) {
         BottomPushDownBar(this as PushDownMachine)
